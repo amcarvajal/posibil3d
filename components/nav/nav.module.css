@@ -1,0 +1,240 @@
+.header{
+    position: fixed absolute;
+    height: 80px;
+    border-bottom: 1px solid black;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    z-index: 999;
+}
+@media(max-width:520px){
+  .header{
+    width: 200%
+  }
+}
+
+.headerButton {
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+    margin-top: 25px;
+    transition: .5s ease;
+
+    cursor: pointer;
+}
+/* .headerButton:hover{
+    
+    padding-top: 5px;
+    transition: .5s ease;
+} */
+
+.menuToggle{
+   display: block;
+   position: relative;
+   top: 30px;
+   left: 50px;
+   z-index: 1;
+   -webkit-user-select: none;
+   user-select: none;
+ }
+ 
+ .menuToggle a
+ {
+   text-decoration: none;
+   color: #030000;
+   transition: color 0.3s ease;
+ }
+  
+ 
+ .menuToggle input
+ {
+   display: block;
+   width: 40px;
+   height: 32px;
+   position: absolute;
+   top: -7px;
+   left: -5px;
+   cursor: pointer;
+
+   opacity: 0; /* hide this */
+   z-index: 2; /* and place it over the hamburger */
+   
+   -webkit-touch-callout: none;
+ }
+ 
+ /*
+  * Just a quick hamburger
+  */
+ .menuToggle span
+ {
+   display: block;
+   width: 30px;
+   height: 3px;
+   margin-bottom: 5px;
+   position: relative;
+   
+   background: #000000;
+   border-radius: 3px;
+   
+   z-index: 1;
+   
+   transform-origin: 4px 0px;
+   
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+               opacity 0.55s ease;
+ }
+ 
+ .menuToggle span:first-child
+ {
+   transform-origin: 0% 0%;
+ }
+ 
+ .menuToggle span:nth-last-child(2)
+ {
+   transform-origin: 0% 100%;
+ }
+ 
+ /* 
+  * Transform all the slices of hamburger
+  * into a crossmark.
+  */
+ .menuToggle input:checked ~ span
+ {
+   opacity: 1;
+   transform: rotate(45deg) translate(-2px, -1px);
+   background: #e4dcdc;
+ }
+ 
+ /*
+  * But let's hide the middle one.
+  */
+ .menuToggle input:checked ~ span:nth-last-child(3)
+ {
+   opacity: 0;
+   transform: rotate(0deg) scale(0.2, 0.2);
+ }
+ 
+ /*
+  * Ohyeah and the last one should go the other direction
+  */
+ .menuToggle input:checked ~ span:nth-last-child(2)
+ {
+   transform: rotate(-45deg) translate(0, -1px);
+ }
+ 
+ /*
+  * Make this absolute positioned
+  * at the top left of the screen
+  */
+ .menu
+ {
+   position: absolute;
+   width: 250px;
+   height: 1000px;
+   margin: -100px 0 0 -50px;
+   padding: 50px;
+   padding-top: 115px;
+   background: black;
+   border: 1px solid black;
+   list-style-type: none;
+   -webkit-font-smoothing: antialiased;
+   /* to stop flickering of text in safari */
+   transform-origin: 0% 0%;
+   transform: translate(-100%, 0);
+   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+ }
+ 
+ .menu li
+ {
+   padding: 10px 0;
+   font-size: 22px;
+   color: white;
+   transition: .4s;
+ }
+  
+ /*
+  * And let's slide it in from the left
+  */
+ .menuToggle input:checked ~ ul
+ {
+   transform: none;
+ }
+
+
+ .navRight {
+     display: flex;
+     justify-content: flex-end;
+     width: 180px;
+     background-color: white;
+     
+ }
+
+.userIcon {
+    position: relative;
+    display: inline-block;
+}
+.userContent {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    top: 79px;
+    border: 1px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height:100px;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.userContent ul li {
+    list-style: none;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .5s;
+    
+}
+ .paddingEffect:hover {
+    padding-left: 10px;
+    transition: 1s;
+    letter-spacing: 3px;
+} 
+
+.userIcon:hover .userContent {
+    display: block;
+} 
+
+
+
+.loginWithGmail button {
+  background-color: rgb(49, 135, 233);
+  width: 155px;
+  height: 35px;
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 120%;
+}
+.googleicon {
+  width: 20px;
+  padding-right: 5px; 
+}
+
+.loginWithGmail button:hover {
+  opacity: .9;
+  transition: .5s
+}
+
+
+
+
+
+
+
+
+
+
+
